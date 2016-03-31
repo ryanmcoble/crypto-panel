@@ -110,7 +110,7 @@ ini_set('precision',20);
                             <table class="table">
                                 <tr>
                                     <td>Account:</td>
-                                    <td><a href="https://etherchain.org/account/0x<?php echo $miner->address ?>" target="_blank">0x<?php $miner->address ?></a></td>
+                                    <td><a href="https://etherchain.org/account/0x<?php echo $miner->address ?>" target="_blank">0x<?php echo $miner->address ?></a></td>
                                 </tr>
                                 <tr>
                                     <td>Main Rig Name:</td>
