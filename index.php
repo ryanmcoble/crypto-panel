@@ -110,39 +110,39 @@ ini_set('precision',20);
                             <table class="table">
                                 <tr>
                                     <td>Account:</td>
-                                    <td><a href="https://etherchain.org/account/0x{{ $miner->address }}" target="_blank">0x{{ $miner->address }}</a></td>
+                                    <td><a href="https://etherchain.org/account/0x<?php $miner->address ?>" target="_blank">0x<?php $miner->address ?></a></td>
                                 </tr>
                                 <tr>
                                     <td>Main Rig Name:</td>
-                                    <td>{{ $miner->settings->name ? $miner->settings->name : 'unnamed' }}</td>
+                                    <td><?php $miner->settings->name ? $miner->settings->name : 'unnamed' ?></td>
                                 </tr>
                                 <tr>
                                     <td>Unpaid:</td>
-                                    <td>0.{{ $miner->unpaid }} ETH</td>
+                                    <td>0.<?php $miner->unpaid ?> ETH</td>
                                 </tr>
                                 <tr>
                                     <td>ETA:</td>
-                                    <td>{{ $ETA }}</td>
+                                    <td><?php $ETA ?></td>
                                 </tr>
                                 <tr>
                                     <td>Effective Hash Rate:</td>
-                                    <td>{{ $miner->hashRate }}</td>
+                                    <td><?php $miner->hashRate ?></td>
                                 </tr>
                                 <tr>
                                     <td>Account Balance:</td>
-                                    <td>{{ substr_replace($account->balance, '.', 2, 0) }} ETH</td>
+                                    <td><?php substr_replace($account->balance, '.', 2, 0) ?> ETH</td>
                                 </tr>
                                 <tr>
                                     <td>Active Rigs:</td>
-                                    <td>{{ $miner->activeWorkers }}</td>
+                                    <td><?php $miner->activeWorkers ?></td>
                                 </tr>
                                 <tr>
                                     <td>Payout Per Hour:</td>
-                                    <td>${{ $miner->usdPerMin * 60.00 }} USD</td>
+                                    <td>$<?php $miner->usdPerMin * 60.00 ?> USD</td>
                                 </tr>
                                 <tr>
                                     <td>Payout Count:</td>
-                                    <td>{{ count($miner->payouts) }} payouts</td>
+                                    <td><?php count($miner->payouts) ?> payouts</td>
                                 </tr>
                             </table>
 
@@ -162,19 +162,19 @@ ini_set('precision',20);
                             <table class="table">
                                 <tr>
                                     <td>USD Price:</td>
-                                    <td>{{ $price }}</td>
+                                    <td><?php $price ?></td>
                                 </tr>
                                 <tr>
                                     <td>ETH Supply:</td>
-                                    <td>{{ $supply }} ETH</td>
+                                    <td><?php $supply ?> ETH</td>
                                 </tr>
                                 <tr>
                                     <td>Difficulty:</td>
-                                    <td>{{ $difficulty }}</td>
+                                    <td><?php $difficulty ?></td>
                                 </tr>
                                 <tr>
                                     <td>Gas Price:</td>
-                                    <td>{{ $gasPrice }}</td>
+                                    <td><?php $gasPrice ?></td>
                                 </tr>
                                 
                             </table>
