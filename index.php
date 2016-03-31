@@ -28,9 +28,9 @@ ini_set('precision',20);
 
 
 	// SLOW API CALL - NEED TO CACHE
-	//$priceURL = 'https://etherchain.org/api/statistics/price';
-	//$priceData = json_decode(file_get_contents($priceURL));
-	//$price = $priceData->data[count($priceData->data) - 1]->usd;
+	$priceURL = 'https://etherchain.org/api/statistics/price';
+	$priceData = json_decode(file_get_contents($priceURL));
+	$price = $priceData->data[count($priceData->data) - 1]->usd;
 	$price = 'API CALL TOO SLOW';
 
 
@@ -162,7 +162,7 @@ ini_set('precision',20);
                             <table class="table">
                                 <tr>
                                     <td>USD Price:</td>
-                                    <td><?php echo $price ?></td>
+                                    <td>$ <?php echo $price ?> USD</td>
                                 </tr>
                                 <tr>
                                     <td>ETH Supply:</td>
