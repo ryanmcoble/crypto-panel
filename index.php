@@ -2,55 +2,53 @@
 
 ini_set('precision',20);
 
-	$accountAddress = '71e691772b64940d940ba4587fbccca55ddd9677';
+$accountAddress = '71e691772b64940d940ba4587fbccca55ddd9677';
 
-	$minerURL = 'http://ethermine.org/api/miner/' . $accountAddress;
-	$minerData = json_decode(file_get_contents($minerURL));
-
-	//dd($minerData);
-
-	
-	$accountURL = 'https://etherchain.org/api/account/0x' . $accountAddress;
-	$accountData = json_decode(file_get_contents($accountURL))->data[0];
-
-	// convert balance
-	$accountData->balance = $accountData->balance / 100;
-
-	//calculated ETA
-	$ethBeforePayout = 1.00 - ('0.' . $minerData->unpaid);
-	$mins = $ethBeforePayout / $minerData->ethPerMin;
-	$hours = $mins / 60;
-
-	$etaHours = (int)$hours;
-	$etaMins = (int)(($hours - (int)$hours) * 60);
-
-	$eta = $etaHours . ' hour(s), ' . $etaMins . ' min(s)';
+$minerURL = 'http://ethermine.org/api/miner/' . $accountAddress;
+$minerData = json_decode(file_get_contents($minerURL));
 
 
-	// SLOW API CALL - NEED TO CACHE
-	$priceURL = 'https://etherchain.org/api/statistics/price';
-	$priceData = json_decode(file_get_contents($priceURL));
-	$price = $priceData->data[count($priceData->data) - 1]->usd;
-	//$price = 'API CALL TOO SLOW';
+$accountURL = 'https://etherchain.org/api/account/0x' . $accountAddress;
+$accountData = json_decode(file_get_contents($accountURL))->data[0];
+
+// convert balance
+$accountData->balance = $accountData->balance / 100;
+
+//calculated ETA
+$ethBeforePayout = 1.00 - ('0.' . $minerData->unpaid);
+$mins = $ethBeforePayout / $minerData->ethPerMin;
+$hours = $mins / 60;
+
+$etaHours = (int)$hours;
+$etaMins = (int)(($hours - (int)$hours) * 60);
+
+$eta = $etaHours . ' hour(s), ' . $etaMins . ' min(s)';
 
 
-	$gasPriceURL = 'https://etherchain.org/api/gasPrice';
-	$gasPriceData = json_decode(file_get_contents($gasPriceURL));
-	$gasPrice = $gasPriceData->data[0]->price;
+// SLOW API CALL - NEED TO CACHE
+$priceURL = 'https://etherchain.org/api/statistics/price';
+$priceData = json_decode(file_get_contents($priceURL));
+$price = $priceData->data[count($priceData->data) - 1]->usd;
+//$price = 'API CALL TOO SLOW';
 
 
-	$difficultyURL = 'https://etherchain.org/api/difficulty';
-	$difficultyData = json_decode(file_get_contents($difficultyURL));
-	$difficulty = $difficultyData->data[0]->difficulty;
+$gasPriceURL = 'https://etherchain.org/api/gasPrice';
+$gasPriceData = json_decode(file_get_contents($gasPriceURL));
+$gasPrice = $gasPriceData->data[0]->price;
 
 
-	$supplyURL = 'https://etherchain.org/api/supply';
-	$supplyData = json_decode(file_get_contents($supplyURL));
-	$supply = $supplyData->data[0]->supply;
+$difficultyURL = 'https://etherchain.org/api/difficulty';
+$difficultyData = json_decode(file_get_contents($difficultyURL));
+$difficulty = $difficultyData->data[0]->difficulty;
 
-    $miner = $minerData;
-    $ETA = $eta;
-    $account = $accountData;
+
+$supplyURL = 'https://etherchain.org/api/supply';
+$supplyData = json_decode(file_get_contents($supplyURL));
+$supply = $supplyData->data[0]->supply;
+
+$miner = $minerData;
+$ETA = $eta;
+$account = $accountData;
 
 ?>
 
@@ -186,6 +184,12 @@ ini_set('precision',20);
             </div>
 
         </div>
+
+        <div id="footer">
+	      	<div class="container">
+	        	<p class="text-muted credit">Coded with love by <a href="http://coble.ninja">Ryan M. Coble</a>.</p>
+	      	</div>
+	    </div>
 
 
 
