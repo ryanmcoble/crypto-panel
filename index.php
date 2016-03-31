@@ -31,7 +31,7 @@ ini_set('precision',20);
 	$priceURL = 'https://etherchain.org/api/statistics/price';
 	$priceData = json_decode(file_get_contents($priceURL));
 	$price = $priceData->data[count($priceData->data) - 1]->usd;
-	$price = 'API CALL TOO SLOW';
+	//$price = 'API CALL TOO SLOW';
 
 
 	$gasPriceURL = 'https://etherchain.org/api/gasPrice';
