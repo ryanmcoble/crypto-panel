@@ -114,35 +114,35 @@ ini_set('precision',20);
                                 </tr>
                                 <tr>
                                     <td>Main Rig Name:</td>
-                                    <td><?php $miner->settings->name ? $miner->settings->name : 'unnamed' ?></td>
+                                    <td><?php echo $miner->settings->name ? $miner->settings->name : 'unnamed' ?></td>
                                 </tr>
                                 <tr>
                                     <td>Unpaid:</td>
-                                    <td>0.<?php $miner->unpaid ?> ETH</td>
+                                    <td>0.<?php echo $miner->unpaid ?> ETH</td>
                                 </tr>
                                 <tr>
                                     <td>ETA:</td>
-                                    <td><?php $ETA ?></td>
+                                    <td><?php echo $ETA ?></td>
                                 </tr>
                                 <tr>
                                     <td>Effective Hash Rate:</td>
-                                    <td><?php $miner->hashRate ?></td>
+                                    <td><?php echo $miner->hashRate ?></td>
                                 </tr>
                                 <tr>
                                     <td>Account Balance:</td>
-                                    <td><?php substr_replace($account->balance, '.', 2, 0) ?> ETH</td>
+                                    <td><?php echo substr_replace($account->balance, '.', 2, 0) ?> ETH</td>
                                 </tr>
                                 <tr>
                                     <td>Active Rigs:</td>
-                                    <td><?php $miner->activeWorkers ?></td>
+                                    <td><?php echo $miner->activeWorkers ?></td>
                                 </tr>
                                 <tr>
                                     <td>Payout Per Hour:</td>
-                                    <td>$<?php $miner->usdPerMin * 60.00 ?> USD</td>
+                                    <td>$<?php echo $miner->usdPerMin * 60.00 ?> USD</td>
                                 </tr>
                                 <tr>
                                     <td>Payout Count:</td>
-                                    <td><?php count($miner->payouts) ?> payouts</td>
+                                    <td><?php echo count($miner->payouts) ?> payouts</td>
                                 </tr>
                             </table>
 
@@ -162,19 +162,19 @@ ini_set('precision',20);
                             <table class="table">
                                 <tr>
                                     <td>USD Price:</td>
-                                    <td><?php $price ?></td>
+                                    <td><?php echo $price ?></td>
                                 </tr>
                                 <tr>
                                     <td>ETH Supply:</td>
-                                    <td><?php $supply ?> ETH</td>
+                                    <td><?php echo $supply ?> ETH</td>
                                 </tr>
                                 <tr>
                                     <td>Difficulty:</td>
-                                    <td><?php $difficulty ?></td>
+                                    <td><?php echo $difficulty ?></td>
                                 </tr>
                                 <tr>
                                     <td>Gas Price:</td>
-                                    <td><?php $gasPrice ?></td>
+                                    <td><?php echo $gasPrice ?></td>
                                 </tr>
                                 
                             </table>
