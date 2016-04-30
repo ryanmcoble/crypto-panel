@@ -50,6 +50,8 @@ $miner = $minerData;
 $ETA = $eta;
 $account = $accountData;
 
+$total = doubleval($account->balance, 2) * $price;
+
 ?>
 
 
@@ -173,6 +175,24 @@ $account = $accountData;
                                 <tr>
                                     <td>Gas Price:</td>
                                     <td><?php echo $gasPrice ?></td>
+                                </tr>
+                                
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Operation Stats</h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <table class="table">
+                                <tr>
+                                    <td>Total:</td>
+                                    <td>$ <?php echo $total ?> USD</td>
                                 </tr>
                                 
                             </table>
