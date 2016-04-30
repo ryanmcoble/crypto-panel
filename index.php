@@ -50,7 +50,7 @@ $miner = $minerData;
 $ETA = $eta;
 $account = $accountData;
 
-$total = doubleval($account->balance, 2) * $price;
+$total = doubleval(substr_replace($account->balance, '.', 2, 0)) * $price;
 
 ?>
 
