@@ -1,5 +1,4 @@
 <?php
-
 ini_set('precision',20);
 
 $accountAddress = '71e691772b64940d940ba4587fbccca55ddd9677';
