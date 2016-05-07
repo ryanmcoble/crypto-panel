@@ -19,6 +19,7 @@
                 font-weight: 600;
                 font-size: 32px;
                 text-align: center;
+                margin-bottom: 24px;
             }
 
             .stats {
@@ -30,8 +31,8 @@
                 font-weight: 600;
             }
 
-            .table > tbody > tr:first-child > td {
-                border: none;
+            .tab-pane {
+                padding-top: 12px;
             }
         </style>
     </head>
