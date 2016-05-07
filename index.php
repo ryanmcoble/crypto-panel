@@ -49,7 +49,7 @@ $miner = $minerData;
 $ETA = $eta;
 $account = $accountData;
 
-$total = doubleval(substr_replace($account->balance, '.', 2, 0)) * $price;
+$total = doubleval(substr_replace($account->balance, '.', (strlen($account->balance)-18), 0)) * $price;
 
 ?>
 
@@ -129,7 +129,7 @@ $total = doubleval(substr_replace($account->balance, '.', 2, 0)) * $price;
                                 </tr>
                                 <tr>
                                     <td>Account Balance:</td>
-                                    <td><?php echo substr_replace($account->balance, '.', (strlen($account->balance) - 18), 0) ?> ETH</td>
+                                    <td><?php echo substr_replace((string)$account->balance, '.', (strlen($account->balance)-18), 0) ?> ETH</td>
                                 </tr>
                                 <tr>
                                     <td>Active Rigs:</td>
