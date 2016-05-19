@@ -24,7 +24,7 @@ class DashboardController extends BaseController {
         $ETA = ETA::calculate($ethermine);
 
         // calculate USD total
-        $total = doubleval($account->balance) * $price;
+        $total = (double) $account->balance * $price;
 
         // setup view data
         $viewData = [

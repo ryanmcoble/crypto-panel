@@ -5,8 +5,7 @@ class AccountBalance {
 
 	public static function toString($balance) {
 
-		$balance = $balance / 100;
-		$balance = substr_replace($balance, '.', 18 - strlen($balance), 0);
+		$balance = substr_replace($balance, '.', strlen($balance) - 18, 0);
 
 		return $balance;
 	}

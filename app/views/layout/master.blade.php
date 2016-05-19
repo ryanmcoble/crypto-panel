@@ -8,6 +8,8 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+        <link rel="stylesheet" href="/assets/css/animate.css" type="text/css">
+
         <style>
             body {
                 margin: 0;
@@ -43,7 +45,7 @@
 
         <div id="footer">
             <div class="container">
-                <p class="text-muted credit">Coded with love by <a href="http://coble.ninja">Ryan M. Coble</a>.</p>
+                <p class="text-muted credit animated hinge">Coded with love by <a href="http://coble.ninja">Ryan M. Coble</a>.</p>
             </div>
         </div>
 

@@ -19,7 +19,7 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="miner-stats">
+    <div role="tabpanel" class="tab-pane animated fadeIn active" id="miner-stats">
 
         <table class="table table-bordered table-striped">
             <thead>
@@ -41,7 +41,7 @@
                 </tr>
                 <tr>
                     <td>Unpaid:</td>
-                    <td>0.{{ $miner->unpaid }} ETH</td>
+                    <td>{{ $miner->unpaid }} ETH</td>
                 </tr>
                 <tr>
                     <td>ETA:</td>
@@ -71,7 +71,7 @@
         </table>
     </div>
 
-    <div role="tabpanel" class="tab-pane" id="eth-stats">
+    <div role="tabpanel" class="tab-pane animated fadeIn" id="eth-stats">
 
         <table class="table table-bordered table-striped">
             <tbody>
@@ -95,7 +95,7 @@
         </table>
     </div>
     
-    <div role="tabpanel" class="tab-pane" id="operation">
+    <div role="tabpanel" class="tab-pane animated fadeIn" id="operation">
 
         <table class="table table-bordered table-striped">
             <tbody>
