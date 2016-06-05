@@ -1,5 +1,6 @@
 @extends('layout.master')
 
+<?php $title = 'Stats'; ?>
 @section('content')
 
 <h1 class="title">Crypto Analytics</h1>

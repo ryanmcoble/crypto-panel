@@ -41,4 +41,8 @@ class DashboardController extends BaseController {
         return View::make('dashboard', $viewData);
 	}
 
+    public function uploads() {
+        return View::make('uploads');
+    }
+
 }

@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'DashboardController@index');
+Route::get('/uploads', 'DashboardController@uploads');
