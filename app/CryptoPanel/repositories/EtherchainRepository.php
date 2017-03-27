@@ -29,7 +29,7 @@ class EtherchainRepository {
 
 	        $gasPriceURL = 'https://etherchain.org/api/gasPrice';
 	        $gasPriceData = json_decode(file_get_contents($gasPriceURL));
-	        $data['gasPrice'] = $gasPriceData->data[0]->price;
+	        $data['gasPrice'] = $gasPriceData->result->gasPrice;
 
 	        $difficultyURL = 'https://etherchain.org/api/difficulty';
 	        $difficultyData = json_decode(file_get_contents($difficultyURL));
