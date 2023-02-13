@@ -1,25 +1,40 @@
-## Laravel PHP Framework
+# Crypto Mining Operation
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+This repository contains the source code for a cryptocurrency mining operation built using Laravel. The platform allows users to monitor their mining hardware, track their earnings, and manage their payments.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+## Features
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+- Real-time monitoring of mining hardware
+- Earnings tracking and projection
+- Payment management and request processing
+- Admin panel for managing user accounts and payments
+- User dashboard for monitoring mining performance
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Tech Stack
 
-## Official Documentation
+This platform was built using:
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+- Laravel (PHP Framework)
+- Vue.js (JavaScript framework for building user interfaces)
+- MySQL (Relational database management system)
 
-### Contributing To Laravel
+## Running the Project
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+1. Clone this repository to your local machine
+2. Navigate to the project directory in the terminal
+3. Install the dependencies by running `composer install`
+4. Copy the `.env.example` file to `.env` and configure your database settings
+5. Generate an application key by running `php artisan key:generate`
+6. Run migrations and seed the database with sample data by running `php artisan migrate:refresh --seed`
+7. Start the development server by running `php artisan serve`
+8. Open your browser and navigate to `http://localhost:8000` to view the platform
 
-### License
+## Deployment
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+This platform is designed to be deployed to a web server running PHP and MySQL. Follow the steps outlined in the Laravel documentation for deploying a Laravel application to your production environment.
+
+## Contact
+
+If you have any questions or comments about this platform, please don't hesitate to reach out through the issue tracker on this repository or via email at ryan.m.coble@gmail.com. I'm always happy to help and collaborate with other developers.
+
+Thank you for checking out this crypto mining operation!
